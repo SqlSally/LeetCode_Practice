@@ -20,7 +20,7 @@
  *
  * @author sally
  */
-public class May8 {
+public class May8CheckIfItIsaStraightLine {
 
   public boolean checkStraightLine(int[][] coordinates) {
     //y = ax + b

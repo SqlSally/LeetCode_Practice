@@ -1,5 +1,3 @@
-
-
 /*
  * Copyright 2020 sally.
  *
@@ -15,33 +13,36 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 /**
- * Do not use any built-in library function such as sqrt.
- * Given a positive integer num, write a function which returns True if num is a perfect square else False.
  *
  * @author sally
  */
-public class May9 {
+public class May1FirstBadVersion {
 
-  public boolean isPerfectSquare(long num) {
-    if (num <= 0) {
-      return false;
-    }
-    int n = 1;
-
-    while (n * n <= num) {
-      if (n * n == num) {
-        return true;
+  public int firstBadVersion(int n) {
+    int l = 1, r = n;
+    while (l < r) {
+      int m = l + (r - l) / 2;
+      if (isBadVersion(m)) {
+        r = m;
+        continue;
       }
-      n++;
+      l = m + 1;
+    }
+    return l;
+  }
+
+  private boolean isBadVersion(int i) {
+    if (i >= 4) {
+      return true;
     }
     return false;
   }
 
   public static void main(String[] args) {
-    May9 may9 = new May9();
-    boolean perfectSquare = may9.isPerfectSquare(101);
-    System.out.println(perfectSquare);
-
+    May1FirstBadVersion mayFirst = new May1FirstBadVersion();
+    int firstBadVersion = mayFirst.firstBadVersion(5);
+    System.out.println(firstBadVersion);
   }
 }

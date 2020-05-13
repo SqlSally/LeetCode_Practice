@@ -7,7 +7,7 @@
  *
  * @author sally
  */
-public class May4 {
+public class May4NumberComplement {
 
   public int findComplement(int num) {
     String toBinaryString = Integer.toBinaryString(num);
@@ -23,7 +23,7 @@ public class May4 {
   }
 
   public static void main(String[] args) {
-    May4 may4 = new May4();
+    May4NumberComplement may4 = new May4NumberComplement();
     int findComplement = may4.findComplement(1);
     System.out.println(findComplement);
   }

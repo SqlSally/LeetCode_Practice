@@ -26,7 +26,7 @@ import java.util.Map;
  *
  * @author sally
  */
-public class May6 {
+public class May6MajorityElement {
 
   public int majorityElement(int[] nums) {
 
@@ -58,7 +58,7 @@ public class May6 {
     nums[1] = 5;
     nums[2] = 5;
 
-    int majorityElement = new May6().majorityElement(nums);
+    int majorityElement = new May6MajorityElement().majorityElement(nums);
     System.out.println(majorityElement);
 
   }

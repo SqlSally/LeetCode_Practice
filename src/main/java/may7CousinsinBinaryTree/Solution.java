@@ -1,4 +1,4 @@
-package may7;
+package may7CousinsinBinaryTree;
 
 public class Solution {
 

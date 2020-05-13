@@ -1,3 +1,6 @@
+
+import java.util.HashSet;
+
 /*
  * Copyright 2020 sally.
  *
@@ -13,36 +16,38 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 /**
+ * Input: N = 2, trust = [[1,2]] Output: 2
+ *
+ * 3 （1，3） （2，3） (3.1)
+ *
+ * j =
+ * N-1 = 2
  *
  * @author sally
  */
-public class May1 {
+public class May10FindtheTownJudge {
 
-  public int firstBadVersion(int n) {
-    int l = 1, r = n;
-    while (l < r) {
-      int m = l + (r - l) / 2;
-      if (isBadVersion(m)) {
-        r = m;
-        continue;
+  public int findJudge(int N, int[][] trust) {
+
+    HashSet<Integer> hashSet;
+
+    for (int j = 1; j <= N; j++) {
+      hashSet = new HashSet<>();
+      int isjudge = 0;
+      for (int[] trt : trust) {
+        if (trt[0] == j) {
+          isjudge = 1;
+        }
+        if (trt[1] == j) {
+          hashSet.add(trt[0]);
+        }
       }
-      l = m + 1;
+      if (isjudge == 0 && hashSet.size() == (N - 1) && !hashSet.contains(j)) {
+        return j;
+      }
     }
-    return l;
+    return -1;
   }
 
-  private boolean isBadVersion(int i) {
-    if (i >= 4) {
-      return true;
-    }
-    return false;
-  }
-
-  public static void main(String[] args) {
-    May1 mayFirst = new May1();
-    int firstBadVersion = mayFirst.firstBadVersion(5);
-    System.out.println(firstBadVersion);
-  }
 }
