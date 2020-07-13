@@ -1,4 +1,4 @@
-package may7CousinsinBinaryTree;
+package CousinsinBinaryTree;
 
 /*
  * Copyright 2020 sally.
