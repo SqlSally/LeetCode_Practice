@@ -12,7 +12,7 @@
  *
  * @author sally
  */
-public class May11FloodFill {
+public class FloodFill {
 
   private static final int[] X = new int[]{0, 1, 0, -1};
 

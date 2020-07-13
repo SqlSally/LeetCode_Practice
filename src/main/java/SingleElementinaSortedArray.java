@@ -21,7 +21,7 @@
  *
  * @author sally
  */
-public class May12SingleElementinaSortedArray {
+public class SingleElementinaSortedArray {
 
   public int singleNonDuplicate(int[] nums) {
     if (nums.length == 1) {
@@ -50,7 +50,7 @@ public class May12SingleElementinaSortedArray {
 //    name[6] = 4;
 //    name[7] = 5;
 //    name[8] = 5;
-    May12SingleElementinaSortedArray may12SingleElementinaSortedArray = new May12SingleElementinaSortedArray();
+    SingleElementinaSortedArray may12SingleElementinaSortedArray = new SingleElementinaSortedArray();
     int singleNonDuplicate = may12SingleElementinaSortedArray.singleNonDuplicate(name);
     System.out.println(singleNonDuplicate);
   }

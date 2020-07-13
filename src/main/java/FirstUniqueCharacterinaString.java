@@ -9,7 +9,7 @@ import java.util.HashMap;
  *
  * @author sally
  */
-public class May5FirstUniqueCharacterinaString {
+public class FirstUniqueCharacterinaString {
 
   public int firstUniqChar(String s) {
 
@@ -35,7 +35,7 @@ public class May5FirstUniqueCharacterinaString {
   }
 
   public static void main(String[] args) {
-    May5FirstUniqueCharacterinaString may5 = new May5FirstUniqueCharacterinaString();
+    FirstUniqueCharacterinaString may5 = new FirstUniqueCharacterinaString();
     int firstUniqChar = may5.firstUniqChar("loveleetcode");
     System.out.println(firstUniqChar);
   }

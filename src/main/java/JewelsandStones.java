@@ -11,7 +11,7 @@ import java.util.HashSet;
  * case sensitive, so "a" is considered a different type of stone from "A". Input: J = "aA", S =
  * "aAAbbbb" Output: 3 case sensitive
  */
-public class May2JewelsandStones {
+public class JewelsandStones {
 
   public int numJewelsInStones(String J, String S) {
     HashSet<Character> hashSet = new HashSet<>();
@@ -33,7 +33,7 @@ public class May2JewelsandStones {
   public static void main(String[] args) {
     String J = "aa";
     String S = "Abbbb";
-    int numJewelsInStones = new May2JewelsandStones().numJewelsInStones(J, S);
+    int numJewelsInStones = new JewelsandStones().numJewelsInStones(J, S);
     System.out.println(numJewelsInStones);
   }
 }

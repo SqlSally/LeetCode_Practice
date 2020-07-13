@@ -20,7 +20,7 @@ import java.util.HashMap;
  *
  * @author sally
  */
-public class May3RansomNote {
+public class RansomNote {
 
   public boolean canConstruct(String ransomNote, String magazine) {
 // add magazine character and count of each character into hashmap
@@ -57,7 +57,7 @@ public class May3RansomNote {
     //"affhiiicabhbdchbidghccijjbfjfhjeddgggbajhidhjchiedhdibgeaecffbbbefiabjdhggihccec"
     String find = "aa";
     String manazine = "ab";
-    boolean canConstruct = new May3RansomNote().canConstruct(find, manazine);
+    boolean canConstruct = new RansomNote().canConstruct(find, manazine);
     System.out.println(canConstruct);
   }
 }

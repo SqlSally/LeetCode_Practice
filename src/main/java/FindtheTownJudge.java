@@ -1,4 +1,5 @@
 
+import java.util.HashSet;
 
 /*
  * Copyright 2020 sally.
@@ -16,32 +17,37 @@
  * limitations under the License.
  */
 /**
- * Do not use any built-in library function such as sqrt.
- * Given a positive integer num, write a function which returns True if num is a perfect square else False.
+ * Input: N = 2, trust = [[1,2]] Output: 2
+ *
+ * 3 （1，3） （2，3） (3.1)
+ *
+ * j =
+ * N-1 = 2
  *
  * @author sally
  */
-public class May9ValidPerfectSquare {
+public class FindtheTownJudge {
 
-  public boolean isPerfectSquare(long num) {
-    if (num <= 0) {
-      return false;
-    }
-    int n = 1;
+  public int findJudge(int N, int[][] trust) {
 
-    while (n * n <= num) {
-      if (n * n == num) {
-        return true;
+    HashSet<Integer> hashSet;
+
+    for (int j = 1; j <= N; j++) {
+      hashSet = new HashSet<>();
+      int isjudge = 0;
+      for (int[] trt : trust) {
+        if (trt[0] == j) {
+          isjudge = 1;
+        }
+        if (trt[1] == j) {
+          hashSet.add(trt[0]);
+        }
       }
-      n++;
+      if (isjudge == 0 && hashSet.size() == (N - 1) && !hashSet.contains(j)) {
+        return j;
+      }
     }
-    return false;
+    return -1;
   }
 
-  public static void main(String[] args) {
-    May9ValidPerfectSquare may9 = new May9ValidPerfectSquare();
-    boolean perfectSquare = may9.isPerfectSquare(101);
-    System.out.println(perfectSquare);
-
-  }
 }
