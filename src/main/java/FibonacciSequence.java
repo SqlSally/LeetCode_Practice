@@ -8,7 +8,7 @@
 public class FibonacciSequence {
 
   /**
-   * Bottom down
+   * 自低向上
    *
    * @param index
    * @return
@@ -25,7 +25,7 @@ public class FibonacciSequence {
   }
 
   /**
-   * Top down
+   * dp 思想
    *
    * @param index
    * @return
